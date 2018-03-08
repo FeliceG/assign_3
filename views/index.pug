@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  p <br> Please complete the information below to receive your Games-R-Us catalogue.
+
+    form(method='GET' action='/index/games')
+      div.form-group
+        label(for='Name') Name: &nbsp;&nbsp;&nbsp;&nbsp;
+        input#name.form-control(type='text', placeholder='name' name='name')
+      div.form-group
+        label(for='Address') Address: &nbsp;
+        input#name.form-control(type='text', placeholder='address' name='address')
+      div.form-group
+        label(for='City') City: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        input#name.form-control(type='text', placeholder='city' name='city')
+      div.form-group
+        label(for='State') State: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        input#name.form-control(type='text', placeholder='state' name='state')
+      p
+      button(type='submit') SUBMIT
